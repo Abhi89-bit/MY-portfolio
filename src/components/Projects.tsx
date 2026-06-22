@@ -172,7 +172,7 @@ export default function Projects() {
             onClick={() => setFilter("all")}
             className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer ${
               filter === "all"
-                ? "bg-indigo-600 text-white shadow-lg shadow-indigo-950/40 scale-105"
+                ? "bg-brand-primary text-slate-950 shadow-lg shadow-brand-primary/20 scale-105"
                 : "bg-slate-900/50 text-slate-400 border border-slate-850 hover:text-slate-200 hover:bg-slate-900"
             }`}
           >
@@ -183,7 +183,7 @@ export default function Projects() {
             onClick={() => setFilter("fullstack")}
             className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer ${
               filter === "fullstack"
-                ? "bg-indigo-600 text-white shadow-lg shadow-indigo-950/40 scale-105"
+                ? "bg-brand-primary text-slate-950 shadow-lg shadow-brand-primary/20 scale-105"
                 : "bg-slate-900/50 text-slate-400 border border-slate-850 hover:text-slate-200 hover:bg-slate-900"
             }`}
           >
@@ -194,7 +194,7 @@ export default function Projects() {
             onClick={() => setFilter("backend")}
             className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer ${
               filter === "backend"
-                ? "bg-indigo-600 text-white shadow-lg shadow-indigo-950/40 scale-105"
+                ? "bg-brand-primary text-slate-950 shadow-lg shadow-brand-primary/20 scale-105"
                 : "bg-slate-900/50 text-slate-400 border border-slate-850 hover:text-slate-200 hover:bg-slate-900"
             }`}
           >
@@ -205,7 +205,7 @@ export default function Projects() {
             onClick={() => setFilter("frontend")}
             className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer ${
               filter === "frontend"
-                ? "bg-indigo-600 text-white shadow-lg shadow-indigo-950/40 scale-105"
+                ? "bg-brand-primary text-slate-950 shadow-lg shadow-brand-primary/20 scale-105"
                 : "bg-slate-900/50 text-slate-400 border border-slate-850 hover:text-slate-200 hover:bg-slate-900"
             }`}
           >
@@ -220,20 +220,14 @@ export default function Projects() {
             <TiltCard
               key={project.id}
               className="flex flex-col h-full overflow-hidden bg-slate-900/10 hover:bg-slate-900/30 border border-slate-900"
-              glowColor={
-                project.category === "fullstack"
-                  ? "rgba(129, 140, 248, 0.12)"
-                  : project.category === "backend"
-                  ? "rgba(167, 139, 250, 0.12)"
-                  : "rgba(34, 211, 238, 0.12)"
-              }
+              glowColor="var(--theme-glow)"
             >
               {/* Card Body */}
               <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   {/* Category & Badge */}
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-indigo-400 flex items-center gap-1">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-brand-primary flex items-center gap-1">
                       <FolderGit2 size={12} />
                       {project.category}
                     </span>
@@ -274,7 +268,7 @@ export default function Projects() {
               <div className="px-6 py-4 bg-slate-950/60 border-t border-slate-900/80 flex items-center justify-between gap-4">
                 <button
                   onClick={() => setSelectedProject(project)}
-                  className="text-xs font-bold text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer flex items-center gap-1"
+                  className="text-xs font-bold text-brand-primary hover:text-brand-secondary transition-colors cursor-pointer flex items-center gap-1"
                 >
                   View Details &rarr;
                 </button>

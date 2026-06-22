@@ -9,8 +9,8 @@ export default function SectionTitle({ badge, title, subtitle, center = true }: 
   return (
     <div className={`space-y-3 mb-12 flex flex-col ${center ? "items-center text-center" : "items-start text-left"}`}>
       {/* Small glowing tag */}
-      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-950/40 border border-indigo-500/20 text-indigo-400 text-xs font-mono font-semibold uppercase tracking-widest shadow-[0_0_15px_rgba(99,102,241,0.05)]">
-        <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
+      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/25 text-brand-primary text-xs font-mono font-semibold uppercase tracking-widest shadow-[0_0_15px_var(--theme-bg-glow)]">
+        <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse" />
         {badge}
       </div>
 
@@ -26,9 +26,9 @@ export default function SectionTitle({ badge, title, subtitle, center = true }: 
 
       {/* Futuristic accent line */}
       <div className="flex items-center gap-1.5 pt-2">
-        <div className="h-[2px] w-8 bg-gradient-to-r from-transparent to-indigo-500 rounded-full" />
-        <div className="h-1.5 w-1.5 rounded-full bg-indigo-400 shadow-[0_0_8px_#818cf8]" />
-        <div className="h-[2px] w-8 bg-gradient-to-l from-transparent to-indigo-500 rounded-full" />
+        <div className="h-[2px] w-8 bg-gradient-to-r from-transparent to-brand-primary rounded-full" />
+        <div className="h-1.5 w-1.5 rounded-full bg-brand-primary shadow-[0_0_8px_var(--theme-primary)]" />
+        <div className="h-[2px] w-8 bg-gradient-to-l from-transparent to-brand-primary rounded-full" />
       </div>
     </div>
   );

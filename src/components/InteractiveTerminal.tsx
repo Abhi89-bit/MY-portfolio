@@ -198,7 +198,7 @@ Status: Operational. Feel free to ping!`
           <div className="w-3 h-3 rounded-full bg-amber-500" />
           <div className="w-3 h-3 rounded-full bg-emerald-500" />
           <span className="ml-2 text-xs font-mono text-slate-400 select-none flex items-center gap-1.5">
-            <TermIcon size={12} className="text-indigo-400" />
+            <TermIcon size={12} className="text-brand-primary" />
             python3 ~/portfolio/{files[activeTab].name}
           </span>
         </div>
@@ -214,8 +214,8 @@ Status: Operational. Feel free to ping!`
             disabled={isTyping || isRunning}
             className={`flex items-center gap-1 px-3 py-1 text-xs font-semibold font-mono rounded transition-all ${
               isTyping || isRunning
-                ? "bg-indigo-950/40 text-indigo-400 border border-indigo-900/30 cursor-not-allowed"
-                : "bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white shadow-md shadow-indigo-950/50 hover:shadow-indigo-900/40 cursor-pointer active:scale-95"
+                ? "bg-brand-primary/10 text-brand-primary border border-brand-primary/20 cursor-not-allowed"
+                : "bg-gradient-to-r from-brand-primary to-brand-secondary text-slate-950 shadow-md shadow-brand-primary/10 hover:shadow-brand-primary/20 cursor-pointer active:scale-95"
             }`}
           >
             {isRunning ? (
@@ -236,11 +236,11 @@ Status: Operational. Feel free to ping!`
             onClick={() => setActiveTab(idx)}
             className={`flex items-center gap-1.5 px-4 py-2.5 border-r border-slate-900 transition-colors select-none cursor-pointer ${
               activeTab === idx
-                ? "bg-slate-950 text-indigo-400 border-t-2 border-t-indigo-500 font-semibold"
+                ? "bg-slate-950 text-brand-primary border-t-2 border-t-brand-primary font-semibold"
                 : "bg-slate-900/40 text-slate-400 hover:bg-slate-900/70 hover:text-slate-200"
             }`}
           >
-            <FileCode size={13} className={activeTab === idx ? "text-indigo-400" : "text-slate-500"} />
+            <FileCode size={13} className={activeTab === idx ? "text-brand-primary" : "text-slate-500"} />
             {file.name}
           </button>
         ))}
@@ -267,7 +267,7 @@ Status: Operational. Feel free to ping!`
         )}
 
         {isRunning && (
-          <div className="text-indigo-400 flex items-center gap-2 py-2 animate-pulse">
+          <div className="text-brand-primary flex items-center gap-2 py-2 animate-pulse">
             <RefreshCw size={14} className="animate-spin" />
             <span>$ python3 {files[activeTab].name}</span>
             <span className="text-slate-500 font-normal">| Initializing virtual environment...</span>
@@ -277,11 +277,11 @@ Status: Operational. Feel free to ping!`
         {showOutput && !isRunning && (
           <div className="animate-fadeIn">
             <div className="text-slate-400 mb-1">$ python3 {files[activeTab].name}</div>
-            <pre className="text-emerald-400 font-semibold whitespace-pre-wrap leading-relaxed pl-3 border-l-2 border-emerald-500/30">
+            <pre className="text-brand-primary font-semibold whitespace-pre-wrap leading-relaxed pl-3 border-l-2 border-brand-primary/30">
               {files[activeTab].output}
             </pre>
             <div className="mt-2 text-slate-500 flex items-center gap-1">
-              <Check size={12} className="text-emerald-500" /> Process finished with exit code 0
+              <Check size={12} className="text-brand-primary" /> Process finished with exit code 0
             </div>
           </div>
         )}

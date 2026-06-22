@@ -11,6 +11,7 @@ import Services from "./components/Services";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ThemeSelector from "./components/ThemeSelector";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -86,10 +87,10 @@ export default function App() {
       {/* Interactive Floating Particle Background */}
       <ParticleBackground />
 
-      {/* Decorative Interactive Blurred Blobs (3D Visual Depth) */}
-      <div className="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-indigo-900/15 blur-[120px] pointer-events-none z-0 animate-float" />
-      <div className="fixed bottom-[-10%] right-[-10%] w-[55vw] h-[55vw] rounded-full bg-violet-900/10 blur-[130px] pointer-events-none z-0 animate-float-delayed" />
-      <div className="fixed top-[40%] right-[15%] w-[30vw] h-[30vw] rounded-full bg-cyan-950/15 blur-[100px] pointer-events-none z-0" />
+      {/* Decorative Interactive Blurred Blobs (3D Visual Depth) - Now 100% Theme Based */}
+      <div className="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-brand-primary/10 blur-[120px] pointer-events-none z-0 animate-float transition-all duration-1000" />
+      <div className="fixed bottom-[-10%] right-[-10%] w-[55vw] h-[55vw] rounded-full bg-brand-secondary/8 blur-[130px] pointer-events-none z-0 animate-float-delayed transition-all duration-1000" />
+      <div className="fixed top-[40%] right-[15%] w-[30vw] h-[30vw] rounded-full bg-brand-primary/5 blur-[100px] pointer-events-none z-0 transition-all duration-1000" />
 
       {/* Sticky Glassmorphic Navbar */}
       <Navbar activeSection={activeSection} onNavClick={handleNavClick} />
@@ -142,6 +143,9 @@ export default function App() {
         <Contact />
 
       </main>
+
+      {/* Floating Interactive Theme Engine Customizer */}
+      <ThemeSelector />
 
       {/* Modern Footer with Quick Links & Digital Info */}
       <Footer onNavClick={handleNavClick} />

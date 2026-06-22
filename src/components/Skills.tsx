@@ -162,34 +162,12 @@ export default function Skills() {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case "backend": return <Server className="text-indigo-400" size={16} />;
-      case "frontend": return <Layout className="text-cyan-400" size={16} />;
-      case "database": return <Database className="text-emerald-400" size={16} />;
-      case "cybersec": return <Shield className="text-rose-400" size={16} />;
-      case "tools": return <Wrench className="text-amber-400" size={16} />;
+      case "backend": return <Server className="text-brand-primary" size={16} />;
+      case "frontend": return <Layout className="text-brand-secondary" size={16} />;
+      case "database": return <Database className="text-brand-primary" size={16} />;
+      case "cybersec": return <Shield className="text-brand-secondary" size={16} />;
+      case "tools": return <Wrench className="text-brand-primary" size={16} />;
       default: return <Code className="text-slate-400" size={16} />;
-    }
-  };
-
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case "backend": return "from-indigo-600 to-violet-500 shadow-indigo-950/40";
-      case "frontend": return "from-cyan-500 to-blue-600 shadow-cyan-950/40";
-      case "database": return "from-emerald-500 to-teal-600 shadow-emerald-950/40";
-      case "cybersec": return "from-rose-600 to-pink-500 shadow-rose-950/40";
-      case "tools": return "from-amber-500 to-orange-500 shadow-amber-950/40";
-      default: return "from-slate-600 to-slate-500";
-    }
-  };
-
-  const getCategoryGlow = (category: string) => {
-    switch (category) {
-      case "backend": return "rgba(99, 102, 241, 0.12)";
-      case "frontend": return "rgba(6, 182, 212, 0.12)";
-      case "database": return "rgba(16, 185, 129, 0.12)";
-      case "cybersec": return "rgba(244, 63, 94, 0.12)";
-      case "tools": return "rgba(245, 158, 11, 0.12)";
-      default: return "rgba(148, 163, 184, 0.12)";
     }
   };
 
@@ -212,7 +190,7 @@ export default function Skills() {
               onClick={() => setActiveCategory(cat.id)}
               className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-mono font-bold border transition-all cursor-pointer ${
                 activeCategory === cat.id
-                  ? "bg-indigo-600 text-white border-indigo-500 shadow-lg shadow-indigo-950/50 scale-105"
+                  ? "bg-brand-primary text-slate-950 border-brand-primary shadow-lg shadow-brand-primary/20 scale-105"
                   : "bg-slate-900/55 text-slate-400 border-slate-800/80 hover:text-slate-200 hover:bg-slate-900"
               }`}
             >
@@ -228,7 +206,7 @@ export default function Skills() {
             <TiltCard
               key={skill.name}
               className="p-6 border border-slate-900/60 flex flex-col justify-between h-full bg-slate-900/20"
-              glowColor={getCategoryGlow(skill.category)}
+              glowColor="var(--theme-bg-glow)"
             >
               <div className="space-y-4">
                 {/* Skill Header */}
@@ -261,9 +239,7 @@ export default function Skills() {
                 </div>
                 <div className="h-1.5 w-full bg-slate-950 rounded-full overflow-hidden p-[1px] border border-slate-900">
                   <div
-                    className={`h-full rounded-full bg-gradient-to-r ${getCategoryColor(
-                      skill.category
-                    )} transition-all duration-1000 ease-out`}
+                    className="h-full rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary transition-all duration-1000 ease-out"
                     style={{ width: `${skill.level}%` }}
                   />
                 </div>
@@ -275,17 +251,17 @@ export default function Skills() {
         {/* Interactive Stats Showcase */}
         <div className="mt-16 p-8 rounded-2xl border border-slate-900 bg-slate-950/65 backdrop-blur-md max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-around gap-8">
           <div className="text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-extrabold text-indigo-400 font-mono">10+</div>
+            <div className="text-3xl sm:text-4xl font-extrabold text-brand-primary font-mono">10+</div>
             <div className="text-xs font-mono text-slate-500 uppercase tracking-widest">Technologies Practiced</div>
           </div>
           <div className="h-px w-12 md:h-12 md:w-px bg-slate-900" />
           <div className="text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-extrabold text-violet-400 font-mono">IBM</div>
+            <div className="text-3xl sm:text-4xl font-extrabold text-brand-secondary font-mono">IBM</div>
             <div className="text-xs font-mono text-slate-500 uppercase tracking-widest">Certified Python & DB</div>
           </div>
           <div className="h-px w-12 md:h-12 md:w-px bg-slate-900" />
           <div className="text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-extrabold text-cyan-400 font-mono">100%</div>
+            <div className="text-3xl sm:text-4xl font-extrabold text-brand-primary font-mono">100%</div>
             <div className="text-xs font-mono text-slate-500 uppercase tracking-widest">OWASP Conscious Development</div>
           </div>
         </div>

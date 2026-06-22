@@ -71,7 +71,7 @@ export default function Contact() {
                 href="tel:7011304656"
                 className="flex items-center gap-4 p-4 rounded-xl border border-slate-900 bg-slate-900/10 hover:bg-slate-900/30 hover:border-slate-800 transition-all text-left group"
               >
-                <div className="p-3 bg-slate-950 border border-slate-850 rounded-xl text-indigo-400 group-hover:text-indigo-300 group-hover:scale-105 transition-transform">
+                <div className="p-3 bg-slate-950 border border-slate-850 rounded-xl text-brand-primary group-hover:text-brand-secondary group-hover:scale-105 transition-transform">
                   <Phone size={18} />
                 </div>
                 <div>
@@ -85,12 +85,12 @@ export default function Contact() {
                 href="mailto:mlcabhi18@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-xl border border-slate-900 bg-slate-900/10 hover:bg-slate-900/30 hover:border-slate-800 transition-all text-left group"
               >
-                <div className="p-3 bg-slate-950 border border-slate-850 rounded-xl text-violet-400 group-hover:text-violet-300 group-hover:scale-105 transition-transform">
+                <div className="p-3 bg-slate-950 border border-slate-850 rounded-xl text-brand-secondary group-hover:text-brand-primary group-hover:scale-105 transition-transform">
                   <Mail size={18} />
                 </div>
                 <div>
                   <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wider font-bold">Write Email</div>
-                  <div className="text-sm font-semibold text-slate-200 group-hover:text-white transition-colors underline decoration-violet-500/30">mlcabhi18@gmail.com</div>
+                  <div className="text-sm font-semibold text-slate-200 group-hover:text-white transition-colors underline decoration-brand-secondary/30">mlcabhi18@gmail.com</div>
                 </div>
               </a>
 
@@ -98,7 +98,7 @@ export default function Contact() {
               <div 
                 className="flex items-start gap-4 p-4 rounded-xl border border-slate-900 bg-slate-900/10 text-left"
               >
-                <div className="p-3 bg-slate-950 border border-slate-850 rounded-xl text-cyan-400 shrink-0">
+                <div className="p-3 bg-slate-950 border border-slate-850 rounded-xl text-brand-primary shrink-0">
                   <MapPin size={18} />
                 </div>
                 <div>
@@ -243,11 +243,11 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === "submitting"}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-indigo-950/50 hover:shadow-indigo-900/45 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed group"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-brand-primary to-brand-secondary text-slate-950 text-sm font-extrabold rounded-xl shadow-lg shadow-brand-primary/20 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed group"
                   >
                     {status === "submitting" ? (
                       <>
-                        <div className="w-4 h-4 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+                        <div className="w-4 h-4 border-2 border-slate-950/20 border-t-slate-950 rounded-full animate-spin" />
                         Encrypting & Dispatching...
                       </>
                     ) : (

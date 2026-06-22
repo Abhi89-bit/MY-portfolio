@@ -1,5 +1,57 @@
 @import "tailwindcss";
 
+@theme {
+  /* Register our dynamic theme CSS variables into Tailwind v4 color system */
+  --color-brand-primary: var(--theme-primary);
+  --color-brand-secondary: var(--theme-secondary);
+  --color-brand-glow: var(--theme-glow);
+  --color-brand-bg-glow: var(--theme-bg-glow);
+}
+
+/* Theme Configuration Blocks */
+:root {
+  /* Default: Cyber Mint (User's Theme 1) */
+  --theme-primary: #6dd5c4;
+  --theme-secondary: #dff6f0;
+  --theme-glow: rgba(109, 213, 196, 0.2);
+  --theme-bg-glow: rgba(109, 213, 196, 0.08);
+}
+
+.theme-mint {
+  --theme-primary: #6dd5c4;
+  --theme-secondary: #dff6f0;
+  --theme-glow: rgba(109, 213, 196, 0.22);
+  --theme-bg-glow: rgba(109, 213, 196, 0.08);
+}
+
+.theme-ice {
+  --theme-primary: #7fcdff;
+  --theme-secondary: #dff7ff;
+  --theme-glow: rgba(127, 205, 255, 0.22);
+  --theme-bg-glow: rgba(127, 205, 255, 0.08);
+}
+
+.theme-amethyst {
+  --theme-primary: #a855f7;
+  --theme-secondary: #e9d5ff;
+  --theme-glow: rgba(168, 85, 247, 0.22);
+  --theme-bg-glow: rgba(168, 85, 247, 0.08);
+}
+
+.theme-sunset {
+  --theme-primary: #f59e0b;
+  --theme-secondary: #fef3c7;
+  --theme-glow: rgba(245, 158, 11, 0.22);
+  --theme-bg-glow: rgba(245, 158, 11, 0.08);
+}
+
+.theme-neon {
+  --theme-primary: #ec4899;
+  --theme-secondary: #fbcfe8;
+  --theme-glow: rgba(236, 72, 153, 0.22);
+  --theme-bg-glow: rgba(236, 72, 153, 0.08);
+}
+
 /* Custom Keyframe Animations */
 @keyframes float {
   0%, 100% {
@@ -92,11 +144,12 @@
   background: rgba(15, 23, 42, 0.7);
 }
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.35);
+  background: var(--theme-primary);
+  opacity: 0.35;
   border-radius: 9999px;
 }
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.55);
+  opacity: 0.55;
 }
 
 /* Glassmorphism Presets */
@@ -112,15 +165,6 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Glow effects */
-.glow-indigo {
-  box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.2);
-}
-
-.glow-violet {
-  box-shadow: 0 0 40px -10px rgba(167, 139, 250, 0.2);
-}
-
 /* Custom Base styles */
 html {
   scroll-behavior: smooth;
@@ -130,6 +174,21 @@ body {
   background-color: #020617;
   color: #f8fafc;
   overflow-x: hidden;
+}
+
+/* Make every themed element transition colors smoothly when the theme changes */
+body, 
+body *,
+body ::before,
+body ::after {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 600ms;
+}
+
+/* Disable transition on scroll animations or specific elements if needed, but keeping it general for theme shifts is perfect */
+.no-transition {
+  transition: none !important;
 }
 
 /* Print Overrides to ensure resume is perfect when saving/printing */

@@ -18,11 +18,11 @@ export default function Footer({ onNavClick }: FooterProps) {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-slate-900/60 pb-8 mb-8">
           {/* Logo */}
           <div className="flex items-center gap-2 font-mono font-bold text-lg text-white">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center">
-              <Terminal size={15} />
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-primary to-brand-secondary flex items-center justify-center">
+              <Terminal size={15} className="text-slate-950" />
             </div>
             <span>
-              ABHIRAJ<span className="text-indigo-400 font-sans font-extrabold">.py</span>
+              ABHIRAJ<span className="text-brand-primary font-sans font-extrabold">.py</span>
             </span>
           </div>
 
@@ -32,7 +32,7 @@ export default function Footer({ onNavClick }: FooterProps) {
               <button
                 key={id}
                 onClick={() => onNavClick(id)}
-                className="hover:text-white capitalize transition-colors cursor-pointer"
+                className="hover:text-brand-primary capitalize transition-colors cursor-pointer"
               >
                 {id}
               </button>
@@ -42,7 +42,7 @@ export default function Footer({ onNavClick }: FooterProps) {
           {/* Scroll to Top Button */}
           <button
             onClick={handleScrollToTop}
-            className="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-900 hover:bg-slate-850 border border-slate-850 hover:border-slate-800 text-indigo-400 hover:text-white transition-all cursor-pointer group shadow-lg"
+            className="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-900 hover:bg-slate-850 border border-slate-850 hover:border-slate-800 text-brand-primary hover:text-white transition-all cursor-pointer group shadow-lg"
             title="Back to Top"
           >
             <ArrowUp size={16} className="group-hover:-translate-y-0.5 transition-transform" />

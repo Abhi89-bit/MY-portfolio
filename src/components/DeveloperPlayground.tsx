@@ -260,12 +260,12 @@ export default function DeveloperPlayground() {
               onClick={() => setActiveTab("nike")}
               className={`flex items-center justify-between p-4 rounded-xl border text-left transition-all cursor-pointer group ${
                 activeTab === "nike"
-                  ? "bg-indigo-950/30 border-indigo-500/40 shadow-lg shadow-indigo-950/30 text-white scale-[1.02]"
+                  ? "bg-brand-primary/10 border-brand-primary/40 shadow-lg shadow-brand-primary/10 text-white scale-[1.02]"
                   : "bg-slate-900/30 border-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-900/50"
               }`}
             >
               <div className="flex items-center gap-3">
-                <span className="w-9 h-9 rounded-lg bg-slate-950 border border-slate-850 flex items-center justify-center text-indigo-400">
+                <span className="w-9 h-9 rounded-lg bg-slate-950 border border-slate-850 flex items-center justify-center text-brand-primary">
                   👟
                 </span>
                 <div>
@@ -281,12 +281,12 @@ export default function DeveloperPlayground() {
               onClick={() => setActiveTab("jarvis")}
               className={`flex items-center justify-between p-4 rounded-xl border text-left transition-all cursor-pointer group ${
                 activeTab === "jarvis"
-                  ? "bg-indigo-950/30 border-indigo-500/40 shadow-lg shadow-indigo-950/30 text-white scale-[1.02]"
+                  ? "bg-brand-primary/10 border-brand-primary/40 shadow-lg shadow-brand-primary/10 text-white scale-[1.02]"
                   : "bg-slate-900/30 border-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-900/50"
               }`}
             >
               <div className="flex items-center gap-3">
-                <span className="w-9 h-9 rounded-lg bg-slate-950 border border-slate-850 flex items-center justify-center text-violet-400">
+                <span className="w-9 h-9 rounded-lg bg-slate-950 border border-slate-850 flex items-center justify-center text-brand-secondary">
                   🦾
                 </span>
                 <div>
@@ -302,12 +302,12 @@ export default function DeveloperPlayground() {
               onClick={() => setActiveTab("database")}
               className={`flex items-center justify-between p-4 rounded-xl border text-left transition-all cursor-pointer group ${
                 activeTab === "database"
-                  ? "bg-indigo-950/30 border-indigo-500/40 shadow-lg shadow-indigo-950/30 text-white scale-[1.02]"
+                  ? "bg-brand-primary/10 border-brand-primary/40 shadow-lg shadow-brand-primary/10 text-white scale-[1.02]"
                   : "bg-slate-900/30 border-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-900/50"
               }`}
             >
               <div className="flex items-center gap-3">
-                <span className="w-9 h-9 rounded-lg bg-slate-950 border border-slate-850 flex items-center justify-center text-cyan-400">
+                <span className="w-9 h-9 rounded-lg bg-slate-950 border border-slate-850 flex items-center justify-center text-brand-primary">
                   <Database size={18} />
                 </span>
                 <div>
@@ -323,12 +323,12 @@ export default function DeveloperPlayground() {
               onClick={() => setActiveTab("task")}
               className={`flex items-center justify-between p-4 rounded-xl border text-left transition-all cursor-pointer group ${
                 activeTab === "task"
-                  ? "bg-indigo-950/30 border-indigo-500/40 shadow-lg shadow-indigo-950/30 text-white scale-[1.02]"
+                  ? "bg-brand-primary/10 border-brand-primary/40 shadow-lg shadow-brand-primary/10 text-white scale-[1.02]"
                   : "bg-slate-900/30 border-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-900/50"
               }`}
             >
               <div className="flex items-center gap-3">
-                <span className="w-9 h-9 rounded-lg bg-slate-950 border border-slate-850 flex items-center justify-center text-emerald-400">
+                <span className="w-9 h-9 rounded-lg bg-slate-950 border border-slate-850 flex items-center justify-center text-brand-secondary">
                   📋
                 </span>
                 <div>
@@ -344,12 +344,12 @@ export default function DeveloperPlayground() {
               onClick={() => setActiveTab("leave")}
               className={`flex items-center justify-between p-4 rounded-xl border text-left transition-all cursor-pointer group ${
                 activeTab === "leave"
-                  ? "bg-indigo-950/30 border-indigo-500/40 shadow-lg shadow-indigo-950/30 text-white scale-[1.02]"
+                  ? "bg-brand-primary/10 border-brand-primary/40 shadow-lg shadow-brand-primary/10 text-white scale-[1.02]"
                   : "bg-slate-900/30 border-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-900/50"
               }`}
             >
               <div className="flex items-center gap-3">
-                <span className="w-9 h-9 rounded-lg bg-slate-950 border border-slate-850 flex items-center justify-center text-rose-400">
+                <span className="w-9 h-9 rounded-lg bg-slate-950 border border-slate-850 flex items-center justify-center text-brand-primary">
                   <CalendarDays size={18} />
                 </span>
                 <div>
@@ -435,13 +435,13 @@ export default function DeveloperPlayground() {
                         )}
                         <div className="flex justify-between text-white font-bold border-t border-slate-800 pt-2 text-sm">
                           <span>Grand Total:</span>
-                          <span className="font-mono text-indigo-400">₹{(nikeCart.reduce((sum, item) => sum + item.price * item.qty, 0) - nikeAppliedDiscount).toLocaleString()}</span>
+                          <span className="font-mono text-brand-primary">₹{(nikeCart.reduce((sum, item) => sum + item.price * item.qty, 0) - nikeAppliedDiscount).toLocaleString()}</span>
                         </div>
-                        <button onClick={handleNikeCheckout} className="w-full mt-2 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-xs font-semibold py-2.5 rounded-lg cursor-pointer transition-all">Submit Secure Checkout</button>
+                        <button onClick={handleNikeCheckout} className="w-full mt-2 bg-gradient-to-r from-brand-primary to-brand-secondary text-slate-950 text-xs font-extrabold py-2.5 rounded-lg cursor-pointer transition-all">Submit Secure Checkout</button>
                       </div>
 
                       {/* Logs console */}
-                      <div className="p-3 rounded-lg bg-slate-950 border border-slate-900 text-[10px] font-mono h-24 overflow-y-auto text-emerald-400 space-y-1">
+                      <div className="p-3 rounded-lg bg-slate-950 border border-slate-900 text-[10px] font-mono h-24 overflow-y-auto text-brand-primary space-y-1">
                         {nikeOrderLogs.map((log, i) => (
                           <div key={i}>{log}</div>
                         ))}
@@ -478,21 +478,21 @@ export default function DeveloperPlayground() {
                         className="w-full flex items-center justify-between p-3 rounded-lg bg-slate-900 hover:bg-slate-850 border border-slate-800 text-xs font-mono font-semibold text-slate-200 cursor-pointer text-left"
                       >
                         <span>&gt; Run Security Diagnostics</span>
-                        <Terminal size={14} className="text-indigo-400" />
+                        <Terminal size={14} className="text-brand-primary" />
                       </button>
                       <button 
                         onClick={() => handleJarvisCommand("skills")}
                         className="w-full flex items-center justify-between p-3 rounded-lg bg-slate-900 hover:bg-slate-850 border border-slate-800 text-xs font-mono font-semibold text-slate-200 cursor-pointer text-left"
                       >
                         <span>&gt; Fetch Core Skills Matrix</span>
-                        <Cpu size={14} className="text-violet-400" />
+                        <Cpu size={14} className="text-brand-secondary" />
                       </button>
                       <button 
                         onClick={() => handleJarvisCommand("craw")}
                         className="w-full flex items-center justify-between p-3 rounded-lg bg-slate-900 hover:bg-slate-850 border border-slate-800 text-xs font-mono font-semibold text-slate-200 cursor-pointer text-left"
                       >
                         <span>&gt; Audit Craw Cybersec Workload</span>
-                        <Shield size={14} className="text-rose-400" />
+                        <Shield size={14} className="text-brand-primary" />
                       </button>
                     </div>
 
@@ -559,12 +559,12 @@ export default function DeveloperPlayground() {
                         type="text" 
                         value={sqlInput} 
                         onChange={(e) => setSqlInput(e.target.value)}
-                        className="bg-slate-950 border border-slate-900 text-xs px-4 py-3 rounded-xl text-slate-200 font-mono focus:outline-none focus:border-indigo-500 flex-grow"
+                        className="bg-slate-950 border border-slate-900 text-xs px-4 py-3 rounded-xl text-slate-200 font-mono focus:outline-none focus:border-brand-primary flex-grow"
                         placeholder="SELECT * FROM table;"
                       />
                       <button 
                         onClick={handleSqlRun}
-                        className="flex items-center gap-1.5 px-5 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-xs font-semibold font-mono rounded-xl cursor-pointer transition-all active:scale-95"
+                        className="flex items-center gap-1.5 px-5 py-3 bg-gradient-to-r from-brand-primary to-brand-secondary text-slate-950 text-xs font-extrabold font-mono rounded-xl cursor-pointer transition-all active:scale-95"
                       >
                         <Play size={12} fill="currentColor" />
                         Run SQL
@@ -577,7 +577,7 @@ export default function DeveloperPlayground() {
                         <div className="overflow-x-auto max-h-[120px] scrollbar-thin">
                           <table className="w-full text-left text-xs font-mono text-slate-300">
                             <thead>
-                              <tr className="border-b border-slate-900 text-indigo-400">
+                              <tr className="border-b border-slate-900 text-brand-primary">
                                 {Object.keys(sqlResult[0]).map(key => (
                                   <th key={key} className="py-2 px-3">{key.toUpperCase()}</th>
                                 ))}
@@ -657,15 +657,15 @@ export default function DeveloperPlayground() {
                     
                     {/* Todo Column */}
                     <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-900 space-y-3">
-                      <h4 className="text-xs font-mono font-bold text-indigo-400 border-b border-slate-800 pb-1.5">Todo ({tasks.filter(t => t.status === "Todo").length})</h4>
+                      <h4 className="text-xs font-mono font-bold text-brand-primary border-b border-slate-800 pb-1.5">Todo ({tasks.filter(t => t.status === "Todo").length})</h4>
                       <div className="space-y-2">
                         {tasks.filter(t => t.status === "Todo").map(t => (
                           <div key={t.id} className="p-3 rounded-lg bg-slate-950 border border-slate-900 space-y-2 text-left">
                             <p className="text-xs text-slate-200 leading-normal">{t.title}</p>
                             <div className="flex items-center justify-between text-[9px] font-mono">
-                              <span className={`px-1 rounded ${t.priority === "High" ? "bg-rose-950/40 border border-rose-900/30 text-rose-300" : "bg-indigo-950/40 border border-indigo-900/30 text-indigo-300"}`}>{t.priority} Priority</span>
+                              <span className={`px-1 rounded ${t.priority === "High" ? "bg-rose-950/40 border border-rose-900/30 text-rose-300" : "bg-brand-primary/10 border border-brand-primary/20 text-brand-primary"}`}>{t.priority} Priority</span>
                               <div className="flex gap-1.5">
-                                <button onClick={() => advanceTask(t.id)} className="text-indigo-400 hover:text-white cursor-pointer" title="Move status">Start &rarr;</button>
+                                <button onClick={() => advanceTask(t.id)} className="text-brand-primary hover:text-white cursor-pointer" title="Move status">Start &rarr;</button>
                                 <button onClick={() => deleteTask(t.id)} className="text-rose-500 hover:text-white cursor-pointer"><Trash2 size={12} /></button>
                               </div>
                             </div>
@@ -676,15 +676,15 @@ export default function DeveloperPlayground() {
 
                     {/* Progress Column */}
                     <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-900 space-y-3">
-                      <h4 className="text-xs font-mono font-bold text-violet-400 border-b border-slate-800 pb-1.5">In Progress ({tasks.filter(t => t.status === "Progress").length})</h4>
+                      <h4 className="text-xs font-mono font-bold text-brand-secondary border-b border-slate-800 pb-1.5">In Progress ({tasks.filter(t => t.status === "Progress").length})</h4>
                       <div className="space-y-2">
                         {tasks.filter(t => t.status === "Progress").map(t => (
                           <div key={t.id} className="p-3 rounded-lg bg-slate-950 border border-slate-900 space-y-2 text-left">
                             <p className="text-xs text-slate-200 leading-normal">{t.title}</p>
                             <div className="flex items-center justify-between text-[9px] font-mono">
-                              <span className="px-1 rounded bg-violet-950/40 border border-violet-900/30 text-violet-300">{t.priority} Priority</span>
+                              <span className="px-1 rounded bg-brand-secondary/10 border border-brand-secondary/20 text-brand-secondary">{t.priority} Priority</span>
                               <div className="flex gap-1.5">
-                                <button onClick={() => advanceTask(t.id)} className="text-violet-400 hover:text-white cursor-pointer" title="Move status">Complete &rarr;</button>
+                                <button onClick={() => advanceTask(t.id)} className="text-brand-secondary hover:text-white cursor-pointer" title="Move status">Complete &rarr;</button>
                                 <button onClick={() => deleteTask(t.id)} className="text-rose-500 hover:text-white cursor-pointer"><Trash2 size={12} /></button>
                               </div>
                             </div>
@@ -695,15 +695,15 @@ export default function DeveloperPlayground() {
 
                     {/* Done Column */}
                     <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-900 space-y-3">
-                      <h4 className="text-xs font-mono font-bold text-emerald-400 border-b border-slate-800 pb-1.5">Done ({tasks.filter(t => t.status === "Done").length})</h4>
+                      <h4 className="text-xs font-mono font-bold text-brand-primary border-b border-slate-800 pb-1.5">Done ({tasks.filter(t => t.status === "Done").length})</h4>
                       <div className="space-y-2">
                         {tasks.filter(t => t.status === "Done").map(t => (
                           <div key={t.id} className="p-3 rounded-lg bg-slate-950 border border-slate-900 space-y-2 text-left">
                             <p className="text-xs text-slate-400 line-through leading-normal">{t.title}</p>
                             <div className="flex items-center justify-between text-[9px] font-mono">
-                              <span className="px-1 rounded bg-emerald-950/40 border border-emerald-900/30 text-emerald-300">{t.priority} Priority</span>
+                              <span className="px-1 rounded bg-brand-primary/10 border border-brand-primary/20 text-brand-primary">{t.priority} Priority</span>
                               <div className="flex gap-1.5">
-                                <span className="text-emerald-400 flex items-center gap-0.5"><CheckCircle size={10} /> Completed</span>
+                                <span className="text-brand-primary flex items-center gap-0.5"><CheckCircle size={10} /> Completed</span>
                                 <button onClick={() => deleteTask(t.id)} className="text-rose-500 hover:text-white cursor-pointer"><Trash2 size={12} /></button>
                               </div>
                             </div>
@@ -764,7 +764,7 @@ export default function DeveloperPlayground() {
 
                       <button 
                         onClick={requestLeave}
-                        className="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-xs font-semibold py-2.5 rounded-lg cursor-pointer transition-all"
+                        className="w-full bg-gradient-to-r from-brand-primary to-brand-secondary text-slate-950 text-xs font-extrabold py-2.5 rounded-lg cursor-pointer transition-all"
                       >
                         Submit Leave Request
                       </button>
@@ -783,17 +783,17 @@ export default function DeveloperPlayground() {
                         <div className="p-3 rounded-lg bg-slate-900/60 border border-slate-900 space-y-1">
                           <span className="text-xl">🤒</span>
                           <span className="text-[10px] font-mono text-slate-400 block">Sick</span>
-                          <span className="text-base font-extrabold text-indigo-400 font-mono">{leaveBalance.sick}d</span>
+                          <span className="text-base font-extrabold text-brand-primary font-mono">{leaveBalance.sick}d</span>
                         </div>
                         <div className="p-3 rounded-lg bg-slate-900/60 border border-slate-900 space-y-1">
                           <span className="text-xl">⛱️</span>
                           <span className="text-[10px] font-mono text-slate-400 block">Casual</span>
-                          <span className="text-base font-extrabold text-violet-400 font-mono">{leaveBalance.casual}d</span>
+                          <span className="text-base font-extrabold text-brand-secondary font-mono">{leaveBalance.casual}d</span>
                         </div>
                         <div className="p-3 rounded-lg bg-slate-900/60 border border-slate-900 space-y-1">
                           <span className="text-xl">✈️</span>
                           <span className="text-[10px] font-mono text-slate-400 block">Annual</span>
-                          <span className="text-base font-extrabold text-cyan-400 font-mono">{leaveBalance.annual}d</span>
+                          <span className="text-base font-extrabold text-brand-primary font-mono">{leaveBalance.annual}d</span>
                         </div>
                       </div>
 
@@ -804,7 +804,7 @@ export default function DeveloperPlayground() {
                           {leaveHistory.map(hist => (
                             <div key={hist.id} className="flex items-center justify-between p-2 rounded bg-slate-950 border border-slate-900/80 text-[10px] font-mono">
                               <span className="text-slate-300">{hist.type} ({hist.duration})</span>
-                              <span className="text-emerald-400 flex items-center gap-1">
+                              <span className="text-brand-primary flex items-center gap-1">
                                 <UserCheck size={10} />
                                 {hist.status}
                               </span>

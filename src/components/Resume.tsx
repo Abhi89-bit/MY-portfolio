@@ -69,7 +69,7 @@ export default function Resume() {
         <div className="no-print flex flex-wrap justify-center items-center gap-4 mb-10">
           <button
             onClick={handlePrint}
-            className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-xs font-semibold font-mono rounded-xl shadow-lg shadow-indigo-950/50 transition-all hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
+            className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-brand-primary to-brand-secondary text-slate-950 text-xs font-extrabold font-mono rounded-xl shadow-lg shadow-brand-primary/20 transition-all hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
           >
             <Printer size={15} />
             Print / Save to PDF
@@ -88,11 +88,11 @@ export default function Resume() {
         <div className="max-w-4xl mx-auto">
           <TiltCard
             className="border border-slate-900 bg-slate-950/85 backdrop-blur-md p-8 sm:p-12 shadow-2xl relative overflow-hidden"
-            glowColor="rgba(99, 102, 241, 0.08)"
+            glowColor="var(--theme-bg-glow)"
           >
             {/* Holographic background elements (Decorations) */}
-            <div className="no-print absolute -top-20 -right-20 w-60 h-60 rounded-full bg-indigo-500/5 blur-3xl pointer-events-none" />
-            <div className="no-print absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-violet-500/5 blur-3xl pointer-events-none" />
+            <div className="no-print absolute -top-20 -right-20 w-60 h-60 rounded-full bg-brand-primary/5 blur-3xl pointer-events-none" />
+            <div className="no-print absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-brand-secondary/5 blur-3xl pointer-events-none" />
 
             {/* Resume Content Print Area */}
             <div id="resume-print-area" className="space-y-10 text-left">
@@ -103,7 +103,7 @@ export default function Resume() {
                   <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight print-text-dark">
                     ABHIRAJ SINGH
                   </h1>
-                  <p className="text-sm font-mono font-bold text-indigo-400 uppercase tracking-widest">
+                  <p className="text-sm font-mono font-bold text-brand-primary uppercase tracking-widest">
                     Full Stack Python Developer
                   </p>
                   <p className="text-xs text-slate-400 max-w-lg leading-relaxed print-text-muted">
@@ -114,17 +114,17 @@ export default function Resume() {
                 {/* Contact Coordinates */}
                 <div className="space-y-1.5 text-xs font-mono text-slate-300 print-text-muted bg-slate-900/40 p-4 rounded-xl border border-slate-900 print-bg-gray print-border">
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-400 font-bold">Phone:</span>
+                    <span className="text-brand-primary font-bold">Phone:</span>
                     <span className="text-slate-200 print-text-dark font-medium">+91 7011304656</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-400 font-bold">Email:</span>
-                    <a href="mailto:mlcabhi18@gmail.com" className="text-slate-200 hover:text-indigo-300 print-text-dark font-medium underline">
+                    <span className="text-brand-primary font-bold">Email:</span>
+                    <a href="mailto:mlcabhi18@gmail.com" className="text-slate-200 hover:text-brand-secondary print-text-dark font-medium underline">
                       mlcabhi18@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-indigo-400 font-bold">Address:</span>
+                    <span className="text-brand-primary font-bold">Address:</span>
                     <span className="text-slate-200 print-text-dark font-medium">New Delhi - 110028, India</span>
                   </div>
                 </div>
@@ -139,12 +139,12 @@ export default function Resume() {
                   {/* Work Experience */}
                   <div className="space-y-5">
                     <h2 className="text-lg font-bold text-white font-mono tracking-wide border-b border-slate-900 pb-2 flex items-center gap-2 print-text-dark print-border">
-                      <Briefcase size={16} className="text-indigo-400" />
+                      <Briefcase size={16} className="text-brand-primary" />
                       WORK EXPERIENCE
                     </h2>
 
                     <div className="space-y-4">
-                      <div className="relative pl-4 border-l-2 border-indigo-500/40 print-border">
+                      <div className="relative pl-4 border-l-2 border-brand-primary/40 print-border">
                         <div className="flex flex-wrap items-center justify-between gap-x-4 mb-1">
                           <h3 className="text-sm font-bold text-slate-200 print-text-dark">
                             Full Stack Developer
@@ -153,7 +153,7 @@ export default function Resume() {
                             Jun 2025 - PRESENT
                           </span>
                         </div>
-                        <p className="text-xs font-mono text-indigo-400 font-bold mb-2">
+                        <p className="text-xs font-mono text-brand-primary font-bold mb-2">
                           Craw Cybersecurity, New Delhi
                         </p>
                         <ul className="text-xs text-slate-400 print-text-muted space-y-1.5 list-disc list-inside leading-relaxed">
@@ -168,14 +168,14 @@ export default function Resume() {
                   {/* Education */}
                   <div className="space-y-5">
                     <h2 className="text-lg font-bold text-white font-mono tracking-wide border-b border-slate-900 pb-2 flex items-center gap-2 print-text-dark print-border">
-                      <BookOpen size={16} className="text-violet-400" />
+                      <BookOpen size={16} className="text-brand-secondary" />
                       EDUCATION HISTORY
                     </h2>
 
                     <div className="space-y-6">
                       
                       {/* IT Vedant */}
-                      <div className="relative pl-4 border-l-2 border-indigo-500/40 print-border">
+                      <div className="relative pl-4 border-l-2 border-brand-primary/40 print-border">
                         <div className="flex flex-wrap items-center justify-between gap-x-4 mb-1">
                           <h3 className="text-sm font-bold text-slate-200 print-text-dark">
                             Full Stack Python Development Specialization
@@ -184,7 +184,7 @@ export default function Resume() {
                             Completed 2024
                           </span>
                         </div>
-                        <p className="text-xs font-mono text-indigo-400 font-bold mb-2">
+                        <p className="text-xs font-mono text-brand-primary font-bold mb-2">
                           IT Vedant, South-Ex, New Delhi
                         </p>
                         <p className="text-xs text-slate-400 print-text-muted leading-relaxed">
@@ -193,7 +193,7 @@ export default function Resume() {
                       </div>
 
                       {/* DU */}
-                      <div className="relative pl-4 border-l-2 border-indigo-500/40 print-border">
+                      <div className="relative pl-4 border-l-2 border-brand-primary/40 print-border">
                         <div className="flex flex-wrap items-center justify-between gap-x-4 mb-1">
                           <h3 className="text-sm font-bold text-slate-200 print-text-dark">
                             BA Political Science (Hons)
@@ -202,7 +202,7 @@ export default function Resume() {
                             2020 - 2023
                           </span>
                         </div>
-                        <p className="text-xs font-mono text-indigo-400 font-bold mb-2">
+                        <p className="text-xs font-mono text-brand-primary font-bold mb-2">
                           Delhi University (SOL)
                         </p>
                         <p className="text-xs text-slate-400 print-text-muted leading-relaxed">
@@ -211,7 +211,7 @@ export default function Resume() {
                       </div>
 
                       {/* School */}
-                      <div className="relative pl-4 border-l-2 border-indigo-500/40 print-border">
+                      <div className="relative pl-4 border-l-2 border-brand-primary/40 print-border">
                         <div className="flex flex-wrap items-center justify-between gap-x-4 mb-1">
                           <h3 className="text-sm font-bold text-slate-200 print-text-dark">
                             Arts & Humanities (Xth - XIIth)
@@ -220,7 +220,7 @@ export default function Resume() {
                             2018 - 2020
                           </span>
                         </div>
-                        <p className="text-xs font-mono text-indigo-400 font-bold mb-2">
+                        <p className="text-xs font-mono text-brand-primary font-bold mb-2">
                           Sarvodaya Bal Vidyalaya, New Delhi
                         </p>
                         <p className="text-xs text-slate-400 print-text-muted leading-relaxed">
@@ -239,7 +239,7 @@ export default function Resume() {
                   {/* Skills Grid */}
                   <div className="space-y-4">
                     <h2 className="text-lg font-bold text-white font-mono tracking-wide border-b border-slate-900 pb-2 flex items-center gap-2 print-text-dark print-border">
-                      <Sparkles size={16} className="text-cyan-400" />
+                      <Sparkles size={16} className="text-brand-primary" />
                       SKILLS MATRIX
                     </h2>
 
@@ -285,7 +285,7 @@ export default function Resume() {
                   {/* Certifications */}
                   <div className="space-y-4">
                     <h2 className="text-lg font-bold text-white font-mono tracking-wide border-b border-slate-900 pb-2 flex items-center gap-2 print-text-dark print-border">
-                      <Award size={16} className="text-pink-400" />
+                      <Award size={16} className="text-brand-secondary" />
                       CREDENTIALS
                     </h2>
 
@@ -293,7 +293,7 @@ export default function Resume() {
                       {certifications.map((cert) => (
                         <div key={cert.name} className="bg-slate-900/40 p-3 rounded-lg border border-slate-900 print-bg-gray print-border">
                           <h4 className="text-xs font-bold text-slate-200 print-text-dark flex items-start gap-1.5">
-                            <CheckCircle size={13} className="text-indigo-400 shrink-0 mt-0.5" />
+                            <CheckCircle size={13} className="text-brand-primary shrink-0 mt-0.5" />
                             <span>{cert.name}</span>
                           </h4>
                           <div className="flex items-center justify-between text-[10px] font-mono text-slate-500 mt-1">

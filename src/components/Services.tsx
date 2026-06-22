@@ -121,13 +121,13 @@ export default function Services() {
             <TiltCard
               key={service.id}
               className="p-6 border border-slate-900 bg-slate-900/10 hover:bg-slate-900/30 flex flex-col justify-between h-full"
-              glowColor={service.glowColor}
+              glowColor="var(--theme-bg-glow)"
             >
               <div className="space-y-6">
                 
                 {/* Header (Icon + Title) */}
                 <div className="flex items-start justify-between">
-                  <div className="p-3 bg-slate-950 border border-slate-800/80 rounded-xl">
+                  <div className="p-3 bg-slate-950 border border-slate-850 rounded-xl text-brand-primary">
                     {service.icon}
                   </div>
                   <button className="p-1 rounded-full hover:bg-slate-850 text-slate-500 hover:text-white transition-colors cursor-pointer">
@@ -149,7 +149,7 @@ export default function Services() {
                 <ul className="space-y-1.5 border-t border-slate-900/60 pt-4 text-xs text-slate-400 text-left">
                   {service.details.map((detail, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-indigo-500 shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-brand-primary shrink-0" />
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -174,7 +174,7 @@ export default function Services() {
         </div>
 
         {/* High-impact Client Statement */}
-        <div className="mt-16 text-center max-w-2xl mx-auto p-6 rounded-2xl bg-gradient-to-r from-indigo-950/20 via-violet-950/20 to-transparent border border-indigo-900/30">
+        <div className="mt-16 text-center max-w-2xl mx-auto p-6 rounded-2xl bg-gradient-to-r from-brand-primary/10 via-brand-secondary/10 to-transparent border border-brand-primary/20">
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-mono">
             &quot;Need a custom solution that isn't listed here? Let's collaborate to build highly customized scripts, third-party API integrations, or databases tailored specifically to your project requirements.&quot;
           </p>

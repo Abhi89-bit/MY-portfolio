@@ -55,11 +55,11 @@ export default function Navbar({ activeSection, onNavClick }: NavbarProps) {
             onClick={() => handleLinkClick("home")}
             className="flex items-center gap-2 font-mono font-bold text-lg text-white hover:opacity-90 transition-opacity cursor-pointer group"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center shadow-md shadow-indigo-950 group-hover:scale-105 transition-transform duration-300">
-              <Terminal size={16} className="text-white animate-pulse" />
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-primary to-brand-secondary flex items-center justify-center shadow-md shadow-brand-primary/25 group-hover:scale-105 transition-transform duration-300">
+              <Terminal size={16} className="text-slate-950 animate-pulse" />
             </div>
-            <span className="bg-gradient-to-r from-white via-slate-200 to-indigo-400 bg-clip-text text-transparent tracking-wide">
-              ABHIRAJ<span className="text-indigo-400 font-extrabold font-sans">.py</span>
+            <span className="bg-gradient-to-r from-white via-slate-200 to-brand-primary bg-clip-text text-transparent tracking-wide">
+              ABHIRAJ<span className="text-brand-primary font-extrabold font-sans">.py</span>
             </span>
           </button>
 
@@ -73,13 +73,13 @@ export default function Navbar({ activeSection, onNavClick }: NavbarProps) {
                   onClick={() => handleLinkClick(link.id)}
                   className={`relative px-3.5 py-2 text-sm font-medium transition-all duration-300 cursor-pointer rounded-lg ${
                     isActive
-                      ? "text-indigo-400 bg-indigo-950/20"
+                      ? "text-brand-primary bg-brand-primary/10"
                       : "text-slate-400 hover:text-white hover:bg-slate-900/40"
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-indigo-500 to-violet-500 rounded-full shadow-[0_0_8px_#6366f1]" />
+                    <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full shadow-[0_0_8px_var(--theme-primary)]" />
                   )}
                 </button>
               );
@@ -87,7 +87,7 @@ export default function Navbar({ activeSection, onNavClick }: NavbarProps) {
 
             <button
               onClick={() => handleLinkClick("resume")}
-              className="ml-4 flex items-center gap-1.5 px-4 py-2 text-xs font-semibold font-mono text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 rounded-lg shadow-lg shadow-indigo-950/50 hover:shadow-indigo-900/40 border border-indigo-500/30 transition-all duration-300 hover:scale-[1.03] cursor-pointer"
+              className="ml-4 flex items-center gap-1.5 px-4 py-2 text-xs font-semibold font-mono text-slate-950 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-lg shadow-lg shadow-brand-primary/20 border border-brand-primary/30 transition-all duration-300 hover:scale-[1.03] cursor-pointer"
             >
               <FileDown size={14} />
               Resume
@@ -122,7 +122,7 @@ export default function Navbar({ activeSection, onNavClick }: NavbarProps) {
                 onClick={() => handleLinkClick(link.id)}
                 className={`flex w-full items-center px-4 py-3 rounded-xl text-base font-medium transition-all ${
                   isActive
-                    ? "text-indigo-400 bg-indigo-950/40 border-l-4 border-l-indigo-500"
+                    ? "text-brand-primary bg-brand-primary/10 border-l-4 border-l-brand-primary"
                     : "text-slate-300 hover:text-white hover:bg-slate-900/60"
                 }`}
               >
@@ -133,7 +133,7 @@ export default function Navbar({ activeSection, onNavClick }: NavbarProps) {
           
           <button
             onClick={() => handleLinkClick("resume")}
-            className="w-full flex items-center justify-center gap-2 mt-4 px-4 py-3 text-sm font-semibold font-mono text-white bg-gradient-to-r from-indigo-600 to-violet-600 rounded-xl shadow-lg shadow-indigo-950/40"
+            className="w-full flex items-center justify-center gap-2 mt-4 px-4 py-3 text-sm font-semibold font-mono text-slate-950 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-xl shadow-lg shadow-brand-primary/20"
           >
             <FileDown size={16} />
             Download Resume

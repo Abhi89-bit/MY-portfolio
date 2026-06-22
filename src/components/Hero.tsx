@@ -68,22 +68,22 @@ export default function Hero({ onNavClick }: HeroProps) {
           <div className="lg:col-span-6 space-y-8 text-left">
             
             {/* Tagline */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/50 border border-indigo-500/30 text-indigo-300 text-xs font-mono font-medium shadow-md animate-bounce-subtle">
-              <Sparkles size={12} className="text-indigo-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-primary/5 border border-brand-primary/35 text-brand-primary text-xs font-mono font-medium shadow-md animate-bounce-subtle">
+              <Sparkles size={12} className="text-brand-primary" />
               <span>Available for Python & Full Stack roles in 2025/2026</span>
             </div>
 
             {/* Title / Name */}
             <div className="space-y-3">
-              <p className="text-base font-mono text-indigo-400 font-semibold tracking-wider">
+              <p className="text-base font-mono text-brand-primary font-semibold tracking-wider">
                 HELLO, WORLD! MY NAME IS
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-none">
-                ABHIRAJ <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">SINGH</span>
+                ABHIRAJ <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">SINGH</span>
               </h1>
               <div className="h-10 sm:h-12 flex items-center">
                 <p className="text-xl sm:text-2xl font-mono text-slate-300 font-semibold">
-                  I am a <span className="text-indigo-400 border-r-2 border-indigo-500 pr-1 animate-pulse">{currentText || " "}</span>
+                  I am a <span className="text-brand-primary border-r-2 border-brand-primary pr-1 animate-pulse">{currentText || " "}</span>
                 </p>
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function Hero({ onNavClick }: HeroProps) {
                 href="https://craw.in" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="text-indigo-400 hover:text-indigo-300 font-medium underline underline-offset-4 decoration-indigo-500/40 hover:decoration-indigo-400 transition-all inline-flex items-center gap-1"
+                className="text-brand-primary hover:text-brand-secondary font-medium underline underline-offset-4 decoration-brand-primary/40 hover:decoration-brand-primary transition-all inline-flex items-center gap-1"
               >
                 Craw Cybersecurity <ExternalLink size={12} />
               </a>. 
@@ -105,21 +105,21 @@ export default function Hero({ onNavClick }: HeroProps) {
             {/* Floating Action Stats */}
             <div className="grid grid-cols-3 gap-4 border-y border-slate-900 py-6 max-w-md">
               <div className="flex flex-col items-start">
-                <div className="flex items-center gap-1.5 text-indigo-400 mb-1">
+                <div className="flex items-center gap-1.5 text-brand-primary mb-1">
                   <Code size={16} />
                   <span className="text-xs font-mono font-bold">PYTHON</span>
                 </div>
                 <span className="text-sm font-semibold text-slate-200">Fullstack Expert</span>
               </div>
               <div className="flex flex-col items-start border-l border-slate-900 pl-4">
-                <div className="flex items-center gap-1.5 text-violet-400 mb-1">
+                <div className="flex items-center gap-1.5 text-brand-secondary mb-1">
                   <Shield size={16} />
                   <span className="text-xs font-mono font-bold">CYBERSEC</span>
                 </div>
                 <span className="text-sm font-semibold text-slate-200">Secure Coding</span>
               </div>
               <div className="flex flex-col items-start border-l border-slate-900 pl-4">
-                <div className="flex items-center gap-1.5 text-cyan-400 mb-1">
+                <div className="flex items-center gap-1.5 text-brand-primary mb-1">
                   <Cpu size={16} />
                   <span className="text-xs font-mono font-bold">DJANGO</span>
                 </div>
@@ -131,7 +131,7 @@ export default function Hero({ onNavClick }: HeroProps) {
             <div className="flex flex-wrap gap-4 pt-2">
               <button
                 onClick={() => onNavClick("projects")}
-                className="flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-indigo-950/60 hover:shadow-indigo-900/50 transition-all hover:scale-[1.03] active:scale-[0.98] cursor-pointer group"
+                className="flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-brand-primary to-brand-secondary text-slate-950 text-sm font-extrabold rounded-xl shadow-lg shadow-brand-primary/20 hover:shadow-brand-primary/40 transition-all hover:scale-[1.03] active:scale-[0.98] cursor-pointer group"
               >
                 View Projects
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -139,14 +139,14 @@ export default function Hero({ onNavClick }: HeroProps) {
 
               <button
                 onClick={() => onNavClick("resume")}
-                className="px-6 py-3.5 bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white text-sm font-semibold rounded-xl border border-slate-800 hover:border-slate-700 transition-all hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
+                className="px-6 py-3.5 bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white text-sm font-semibold rounded-xl border border-slate-850 hover:border-slate-700 transition-all hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
               >
                 View Resume
               </button>
 
               <button
                 onClick={() => onNavClick("contact")}
-                className="px-6 py-3.5 bg-transparent hover:bg-indigo-950/20 text-indigo-400 text-sm font-semibold rounded-xl border border-indigo-500/20 hover:border-indigo-500/40 transition-all hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
+                className="px-6 py-3.5 bg-transparent hover:bg-brand-primary/10 text-brand-primary text-sm font-semibold rounded-xl border border-brand-primary/25 hover:border-brand-primary/40 transition-all hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
               >
                 Contact Me
               </button>
@@ -155,18 +155,18 @@ export default function Hero({ onNavClick }: HeroProps) {
 
           {/* Interactive Developer IDE / Visual */}
           <div className="lg:col-span-6 w-full relative">
-            <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-indigo-500 via-violet-600 to-pink-500 opacity-20 blur-xl animate-pulse" />
+            <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-r from-brand-primary to-brand-secondary opacity-25 blur-xl animate-pulse" />
             <div className="relative">
               <InteractiveTerminal />
               
               {/* Floating micro glass badges to create depth */}
               <div className="absolute -top-6 -right-4 bg-slate-900/80 backdrop-blur-md border border-slate-800/80 p-3 rounded-xl flex items-center gap-2 shadow-xl animate-float pointer-events-none hidden sm:flex">
-                <div className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                <div className="w-2 h-2 rounded-full bg-brand-primary animate-ping" />
                 <span className="text-[10px] font-mono text-slate-300">Live Server Active</span>
               </div>
 
               <div className="absolute -bottom-6 -left-6 bg-slate-900/80 backdrop-blur-md border border-slate-800/80 p-3 rounded-xl flex items-center gap-2.5 shadow-xl animate-float-delayed pointer-events-none hidden sm:flex">
-                <div className="w-7 h-7 rounded bg-indigo-950 flex items-center justify-center text-indigo-400 font-bold text-xs font-mono">
+                <div className="w-7 h-7 rounded bg-slate-950 flex items-center justify-center text-brand-primary font-bold text-xs font-mono border border-brand-primary/20">
                   &lt;/&gt;
                 </div>
                 <div>
